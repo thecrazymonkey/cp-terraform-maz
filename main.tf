@@ -84,7 +84,7 @@ resource "azurerm_network_security_group" "myterraformnsg" {
     access                     = "Allow"
     protocol                   = "Tcp"
     source_port_range          = "*"
-    destination_port_range     = "9091-9093"
+    destination_port_range     = "9091-9094"
     source_address_prefix      = format("%s/32",chomp(data.http.myip.body))
     destination_address_prefix = "*"
   }
